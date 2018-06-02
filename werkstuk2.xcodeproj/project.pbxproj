@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3FE29FA720C341180002283B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE29FA620C341180002283B /* AppDelegate.swift */; };
-		3FE29FA920C341180002283B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE29FA820C341180002283B /* ViewController.swift */; };
 		3FE29FAC20C341180002283B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE29FAA20C341180002283B /* Main.storyboard */; };
 		3FE29FAF20C341180002283B /* werkstuk2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE29FAD20C341180002283B /* werkstuk2.xcdatamodeld */; };
 		3FE29FB120C341180002283B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE29FB020C341180002283B /* Assets.xcassets */; };
 		3FE29FB420C341180002283B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE29FB220C341180002283B /* LaunchScreen.storyboard */; };
 		3FE29FBF20C341180002283B /* werkstuk2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE29FBE20C341180002283B /* werkstuk2Tests.swift */; };
 		3FE29FCA20C341180002283B /* werkstuk2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE29FC920C341180002283B /* werkstuk2UITests.swift */; };
+		3FE29FD820C3449E0002283B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE29FD720C3449E0002283B /* MapViewController.swift */; };
+		3FE29FDB20C344D20002283B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE29FDA20C344D20002283B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		3FE29FA320C341180002283B /* werkstuk2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = werkstuk2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE29FA620C341180002283B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FE29FA820C341180002283B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FE29FAB20C341180002283B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FE29FAE20C341180002283B /* werkstuk2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = werkstuk2.xcdatamodel; sourceTree = "<group>"; };
 		3FE29FB020C341180002283B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		3FE29FC520C341180002283B /* werkstuk2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = werkstuk2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE29FC920C341180002283B /* werkstuk2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = werkstuk2UITests.swift; sourceTree = "<group>"; };
 		3FE29FCB20C341180002283B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE29FD720C3449E0002283B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3FE29FDA20C344D20002283B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE29FDB20C344D20002283B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				3FE29FBD20C341180002283B /* werkstuk2Tests */,
 				3FE29FC820C341180002283B /* werkstuk2UITests */,
 				3FE29FA420C341180002283B /* Products */,
+				3FE29FD920C344D20002283B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				3FE29FA620C341180002283B /* AppDelegate.swift */,
-				3FE29FA820C341180002283B /* ViewController.swift */,
 				3FE29FAA20C341180002283B /* Main.storyboard */,
+				3FE29FD720C3449E0002283B /* MapViewController.swift */,
 				3FE29FB020C341180002283B /* Assets.xcassets */,
 				3FE29FB220C341180002283B /* LaunchScreen.storyboard */,
 				3FE29FB520C341180002283B /* Info.plist */,
@@ -126,6 +130,14 @@
 				3FE29FCB20C341180002283B /* Info.plist */,
 			);
 			path = werkstuk2UITests;
+			sourceTree = "<group>";
+		};
+		3FE29FD920C344D20002283B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FE29FDA20C344D20002283B /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +209,11 @@
 					3FE29FA220C341180002283B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3FE29FB920C341180002283B = {
 						CreatedOnToolsVersion = 9.2;
@@ -262,9 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE29FA920C341180002283B /* ViewController.swift in Sources */,
 				3FE29FAF20C341180002283B /* werkstuk2.xcdatamodeld in Sources */,
 				3FE29FA720C341180002283B /* AppDelegate.swift in Sources */,
+				3FE29FD820C3449E0002283B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
