@@ -60,9 +60,48 @@ class MapViewController: UIViewController {
         for index in 0...json.count-1 {
             let station = NSEntityDescription.insertNewObject(forEntityName: "Station", into: managedContext) as! Station
             let object = json[index] as! [String: AnyObject]
-            print(object["number"] as! Int)
+            station.number = object["number"] as! Int16
+            station.name = object["name"] as? String
+            station.address = object["address"] as? String
+            
+            let position = object["position"] as! [String: AnyObject]
+            station.lat = position["lat"] as! Double
+            station.lng = position["lng"] as! Double
+            
+            station.banking = object["banking"] as! Bool
+            station.bonus = object["bonus"] as! Bool
+            station.status = object["status"] as? String
+            station.contract_name = object["contract_name"] as? String
+            station.bike_stands = object["bike_stands"] as! Int16
+            station.available_bike_stands = object["available_bike_stands"] as! Int16
+            station.available_bikes = object["available_bikes"] as! Int16
+            station.last_update = object["last_update"] as! Int64
         }
+        do {
+            try managedContext.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+        updateMap()
+    }
+    
+    func updateMap() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            else {
+                return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
         
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Station")
+        let stations: [Station]
+        do {
+            stations = try managedContext.fetch(fetch) as! [Station]
+            for s in stations {
+                print(s.name)
+            }
+        } catch {
+            fatalError("Failed to fetch stations: \(error)")
+        }
     }
     
     /*
