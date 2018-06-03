@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F31D6B920C40D0800807770 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31D6B820C40D0800807770 /* DetailsViewController.swift */; };
+		3F31D6BB20C40F0A00807770 /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31D6BA20C40F0A00807770 /* MyAnnotation.swift */; };
 		3FE29FA720C341180002283B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE29FA620C341180002283B /* AppDelegate.swift */; };
 		3FE29FAC20C341180002283B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE29FAA20C341180002283B /* Main.storyboard */; };
 		3FE29FAF20C341180002283B /* werkstuk2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE29FAD20C341180002283B /* werkstuk2.xcdatamodeld */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F31D6B820C40D0800807770 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		3F31D6BA20C40F0A00807770 /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		3FE29FA320C341180002283B /* werkstuk2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = werkstuk2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE29FA620C341180002283B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE29FAB20C341180002283B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,7 +109,9 @@
 			children = (
 				3FE29FA620C341180002283B /* AppDelegate.swift */,
 				3FE29FAA20C341180002283B /* Main.storyboard */,
+				3F31D6B820C40D0800807770 /* DetailsViewController.swift */,
 				3FE29FD720C3449E0002283B /* MapViewController.swift */,
+				3F31D6BA20C40F0A00807770 /* MyAnnotation.swift */,
 				3FE29FB020C341180002283B /* Assets.xcassets */,
 				3FE29FB220C341180002283B /* LaunchScreen.storyboard */,
 				3FE29FB520C341180002283B /* Info.plist */,
@@ -281,7 +287,9 @@
 			files = (
 				3FE29FAF20C341180002283B /* werkstuk2.xcdatamodeld in Sources */,
 				3FE29FA720C341180002283B /* AppDelegate.swift in Sources */,
+				3F31D6BB20C40F0A00807770 /* MyAnnotation.swift in Sources */,
 				3FE29FD820C3449E0002283B /* MapViewController.swift in Sources */,
+				3F31D6B920C40D0800807770 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
