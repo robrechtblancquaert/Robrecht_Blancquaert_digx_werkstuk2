@@ -19,10 +19,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var interval: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var refreshButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshButton.setTitle(NSLocalizedString("refresh", comment: ""), for: .normal)
         
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
@@ -44,7 +47,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     func updateTimer() {
         lastUpdate = lastUpdate + 1
         let (h,m,s) = convertTime(seconds: lastUpdate)
-        self.interval.text = String(h) + "h " + String(m) + "m " + String(s) + "s sinds update" 
+        self.interval.text = String(h) + "h " + String(m) + "m " + String(s) + "s " + NSLocalizedString("since update", comment: "")
     }
     
     func convertTime (seconds : Int) -> (Int, Int, Int) {
@@ -108,10 +111,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             let station: Station
             if(foundStations.count == 0) {
                 station = NSEntityDescription.insertNewObject(forEntityName: "Station", into: managedContext) as! Station
-                print("new station")
             } else {
                 station = foundStations[0]
-                print("refreshed station")
             }
             
             station.number = object["number"] as! Int16
@@ -183,7 +184,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "showDetails") {
-            let vc = segue.destination as! DetailsViewController
+            let vc = segue.destination as! TableViewController
             vc.station = self.selectedStation
         }
     }

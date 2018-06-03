@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  werkstuk2
+
+  Created by student on 03/06/2018.
+  Copyright © 2018 student. All rights reserved.
+*/
+
+"since update"="sinds update";
+"refresh"="hernieuw";
+"name"="naam";
+"number"="nummer";
+"address"="adres";
+"banking"="bank";
+"bonus"="bonus";
+"status"="status";
+"bike stands"="fiets standen";
+"available bikes"="beschikbare fietsen";
+"available bike stands"="beschikbare fiets standen";
